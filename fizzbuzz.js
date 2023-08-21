@@ -41,11 +41,11 @@ function fizzBuzz(count) {
   let result = { count, fizz: 0, buzz: 0, fizzBuzz: 0 }
   for (let i = 1; i <= count; i += 1) {
     const str = fizzyBuzzy(i)
-    switch(str) {
-      case FIZZ: 
+    switch (str) {
+      case FIZZ:
         result.fizz += 1
         break
-      case BUZZ: 
+      case BUZZ:
         result.buzz += 1
         break
       case FIZZBUZZ:
@@ -56,11 +56,4 @@ function fizzBuzz(count) {
   return result
 }
 
-module.exports.isFizzy = isFizzy
-module.exports.isBuzzy = isBuzzy
-module.exports.fizzyBuzzy = fizzyBuzzy
-module.exports.fizzBuzz = fizzBuzz
-module.exports.FIZZ = FIZZ
-module.exports.BUZZ = BUZZ
-module.exports.FIZZBUZZ = FIZZBUZZ
-
+module.exports = { isFizzy, isBuzzy, fizzyBuzzy, fizzBuzz, FIZZ, BUZZ, FIZZBUZZ }
